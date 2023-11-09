@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           },
         ]}
       />
-      <Form invoice={invoice} customers={customers} />
+      {invoice && <Form invoice={invoice} customers={customers} />}
     </main>
   );    
 }
