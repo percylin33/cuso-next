@@ -79,13 +79,6 @@ export default async function InvoicesTable({
               </tr>
             </thead>
             <tbody className="bg-white">
-            <img
-                        src={invoices[0].image_url}
-                        className="rounded-full"
-                        width={28}
-                        height={28}
-                        alt={`${invoices[0].name}'s profile picture`}
-                      />
               {invoices?.map((invoice) => (
                 <tr
                   key={invoice.id}
