@@ -79,7 +79,7 @@ export default async function InvoicesTable({
               </tr>
             </thead>
             <tbody className="bg-white">
-            <Image
+            <img
                         src={invoices[0].image_url}
                         className="rounded-full"
                         width={28}
