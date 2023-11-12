@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-imageProxy = {
-    host: 'https://my-image-proxy.com',
-    prefix: '/customers/',
-  };
+const nextConfig = {
+    publicPath: "/public",
+};  
+
 module.exports = nextConfig;
