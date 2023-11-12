@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    publicPath: "/public",
+    publicPath: "/customers",
 };  
 
 module.exports = nextConfig;
