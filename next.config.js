@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
-nextAuth.proxy.ignore = ['/customers/*'];
-
+imageProxy = {
+    host: 'https://my-image-proxy.com',
+    prefix: '/customers/',
+  };
 module.exports = nextConfig;
