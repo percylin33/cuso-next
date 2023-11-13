@@ -15,16 +15,9 @@ async function getUser(email: string): Promise<User | undefined> {
     throw new Error('Failed to fetch user.');
   }
 }
-
-declare module 'next-auth' {
-  interface NextAuthConfig {
-    assetPrefix?: string;
-  }
-}//estos
  
 export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
-  assetPrefix: "/public/customers",//esto
   providers: [
     Credentials({
       async authorize(credentials) {
