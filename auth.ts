@@ -24,7 +24,7 @@ declare module 'next-auth' {
  
 export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
-  assetPrefix: "/public/customers",//esto
+  assetPrefix: "/customers",//esto
   providers: [
     Credentials({
       async authorize(credentials) {
