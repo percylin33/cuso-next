@@ -20,11 +20,11 @@ declare module 'next-auth' {
   interface NextAuthConfig {
     assetPrefix?: string;
   }
-}//esto
+}//estos
  
 export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
-  assetPrefix: "/customers",//esto
+  assetPrefix: "/public/customers",//esto
   providers: [
     Credentials({
       async authorize(credentials) {
