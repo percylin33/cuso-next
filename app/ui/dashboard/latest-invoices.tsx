@@ -29,7 +29,7 @@ export default async function LatestInvoices() {
                 )}
               >
                 <div className="flex items-center">
-                  <UserIcon className='w-5 h-5 mr-5'  />
+                  <UserIcon className='w-7 h-7 rounded-full p-1  bg-blue-100 mr-2'  />
                   <div className="min-w-0">
                     <p className="truncate text-sm font-semibold md:text-base">
                       {invoice.name}
