@@ -3,7 +3,7 @@ import { UpdateInvoice, DeleteInvoice } from '@/app/ui/invoices/buttons';
 import InvoiceStatus from '@/app/ui/invoices/status';
 import { formatDateToLocal, formatCurrency } from '@/app/lib/utils';
 import { fetchFilteredInvoices } from '@/app/lib/data';
-import {UserIcon} from '@heroicons/react/24/outline';
+import imagenes from '@/app/lib/imagePaths';
 
 export default async function InvoicesTable({
   query,
@@ -28,7 +28,13 @@ export default async function InvoicesTable({
                 <div className="flex items-center justify-between border-b pb-4">
                   <div>
                     <div className="mb-2 flex items-center">
-                      <UserIcon className='w-7 h-7 rounded-full p-1 mr-2 bg-blue-100'  />
+                          <Image
+                            src={imagenes[invoice.image_url]}
+                            className="rounded-full"
+                            alt={`${invoice.name}'s profile picture`}
+                            width={28}
+                            height={28}
+                          />
                       <p>{invoice.name}</p>
                     </div>
                     <p className="text-sm text-gray-500">{invoice.email}</p>
@@ -81,7 +87,13 @@ export default async function InvoicesTable({
                 >
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex items-center gap-3">
-                      <UserIcon className='w-7 h-7 rounded-full p-1  bg-blue-100' />
+                          <Image
+                            src={imagenes[invoice.image_url]}
+                            className="rounded-full"
+                            alt={`${invoice.name}'s profile picture`}
+                            width={28}
+                            height={28}
+                          />
                       <p>{invoice.name}</p>
                     </div>
                   </td>

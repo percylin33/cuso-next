@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
 import { LatestInvoice } from '@/app/lib/definitions';
 import { fetchLatestInvoices } from '@/app/lib/data';
-import {UserIcon} from '@heroicons/react/24/outline';
+import imagenes from '@/app/lib/imagePaths';
 
 export default async function LatestInvoices() {
   const latestInvoices = await fetchLatestInvoices();
@@ -29,7 +29,13 @@ export default async function LatestInvoices() {
                 )}
               >
                 <div className="flex items-center">
-                  <UserIcon className='w-7 h-7 rounded-full p-1  bg-blue-100 mr-2'  />
+                          <Image
+                            src={imagenes[invoice.image_url]}
+                            className="rounded-full mr-3"
+                            alt={`${invoice.name}'s profile picture`}
+                            width={28}
+                            height={28}
+                          />
                   <div className="min-w-0">
                     <p className="truncate text-sm font-semibold md:text-base">
                       {invoice.name}
