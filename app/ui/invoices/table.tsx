@@ -30,7 +30,7 @@ export default async function InvoicesTable({
                     <div className="mb-2 flex items-center">
                           <Image
                             src={imagenes[invoice.image_url]}
-                            className="rounded-full"
+                            className="rounded-full mr-3"
                             alt={`${invoice.name}'s profile picture`}
                             width={28}
                             height={28}
